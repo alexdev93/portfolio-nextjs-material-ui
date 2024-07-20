@@ -11,8 +11,7 @@ const ExperiancePage = () => {
     <Box sx={classes.aboutSection}>
       <Box sx={classes.mainTitle}>
         <Typography variant="h2">
-          About <span sx={classes.highlight}>me</span>
-          <span sx={classes.bgText}>my stats</span>
+          About me
         </Typography>
       </Box>
       <Grid container spacing={4} sx={classes.aboutContainer}>
