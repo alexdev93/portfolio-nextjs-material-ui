@@ -6,7 +6,7 @@ import {
     StoryContainer,
     InfoContainer,
     Title,
-} from './AboutStyles';
+} from '../styles/AboutStyles';
 
 const stories = [
     {

@@ -10,7 +10,7 @@ import {
   CardDate,
   CardSubtitle,
   CardDetail,
-} from './TimelineStyles';
+} from '../styles/TimelineStyles';
 
 const data = [
   {

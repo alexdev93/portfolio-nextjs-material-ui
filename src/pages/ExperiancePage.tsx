@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Typography, Button, Grid, Card, CardContent } from '@mui/material';
 import DownloadIcon from '@mui/icons-material/Download';
-import aboutMeStyles from './aboutMeStyles';
+import aboutMeStyles from '../styles/aboutMeStyles';
 import theme from '../styles/theme';
 
 const ExperiancePage = () => {

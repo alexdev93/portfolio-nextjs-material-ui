@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Typography, Grid, Container } from '@mui/material';
-import skillsStyles from './skillsStyles';
+import skillsStyles from '../styles/skillsStyles';
 import theme from '../styles/theme';
 
 const skills = [

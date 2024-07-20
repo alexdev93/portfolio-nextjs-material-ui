@@ -9,7 +9,7 @@ import {
   Name,
   Description,
   MainButton
-} from './HomeStyles';
+} from '../styles/HomeStyles';
 
 const HomeHeader = () => {
   return (
