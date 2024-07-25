@@ -2,27 +2,24 @@
 
 import { createTheme, Theme } from '@mui/material/styles';
 
-// Helper function to get CSS variable value
-const getCssVariable = (name: string) => 
-  getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+const primaryMain = "#191d2b";
+const secondaryMain = "#27AE60";
+const white = "#FFFFFF";
+const black = "#000";
+const grey0 = "f8f8f8";
+const grey1 = "#dbe1e8";
+const grey2 = "#b2becd";
+const grey3 = "#6c7983";
+const grey4 = "#454e56";
+const grey5 = "#2a2e35";
+const grey6 = "#12181b";
+const boxShadow1 = "0 3px 15px rgba(0, 0, 0, .3)";
+const animateDuration = "300ms";
+const animateDelay = "0.2ms";
+const borderRadiusSm2 = "14px";
 
 const createCustomTheme = (): Theme => {
   // Access CSS variables
-  const primaryMain = "#191d2b";
-  const secondaryMain = "#27AE60";
-  const white = "#FFFFFF";
-  const black = "#000";
-  const grey0 = "f8f8f8";
-  const grey1 = "#dbe1e8";
-  const grey2 = "#b2becd";
-  const grey3 = "#6c7983";
-  const grey4 = "#454e56";
-  const grey5 = "#2a2e35";
-  const grey6 = "#12181b";
-  const boxShadow1 = "0 3px 15px rgba(0, 0, 0, .3)";
-  const animateDuration = "300ms";
-  const animateDelay = "0.2ms";
-  const borderRadiusSm2 = "14px";
 
   return createTheme({
     palette: {

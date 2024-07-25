@@ -23,7 +23,7 @@ const HomeHeader = () => {
               src='/photo_2024-07-16_06-27-39.jpg'
               alt=""
               layout='fill' // Fill the container
-              objectFit='cover' // Maintain aspect ratio
+              objectFit='cover'
             />
           </ImageContainer>
         </LeftHeader>

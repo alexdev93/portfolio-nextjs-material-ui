@@ -1,5 +1,9 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
+import createCustomTheme from './../theme';
+
+// Get theme values
+const theme = createCustomTheme();
 
 export const ControlsContainer = styled.nav`
   position: fixed;
@@ -26,7 +30,7 @@ export const ControlsContainer = styled.nav`
 export const Control = styled.div`
   padding: 1rem;
   cursor: pointer;
-  background-color: var(--color-grey-4);
+  background-color: ${theme.palette.grey[400]};
   width: 55px;
   height: 55px;
   border-radius: 50%;
@@ -37,17 +41,17 @@ export const Control = styled.div`
   box-shadow: var(--box-shadow-1);
 
   &:hover {
-    background-color: var(--color-secondary);
+    background-color: ${theme.palette.secondary.main};
     transition: all 0.4s ease-in-out;
   }
 
   &:hover > svg {
-    fill: var(--color-white);
+    fill: ${theme.palette.common.white};
   }
 `;
 
 export const NavigationIcon = css`
   width: 28px;
   height: 28px;
-  fill: var(--color-grey-2); /* Adjust based on your design */
+  fill: ${theme.palette.grey[200]}; /* Adjust based on your design */
 `;

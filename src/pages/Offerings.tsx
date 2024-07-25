@@ -63,7 +63,7 @@ const Offerings: React.FC = () => {
       <Heading variant="h1">
         Services Built Specifically for your Business
       </Heading>
-      <StyledGrid container spacing={5}>
+      <StyledGrid container spacing={3}>
         {[
           {
             title: 'UI/UX creative design',

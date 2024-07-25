@@ -15,9 +15,12 @@ import SkillsSection from '../pages/SkillsSection';
 import ContactPage from '../pages/ContactPage';
 import Experiance from '../pages/Experiance';
 import Offerings from '../pages/Offerings';
+import { ThemeProvider } from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
+  const theme = useTheme();
 
   useEffect(() => {
     setTimeout(() => {
@@ -47,5 +50,6 @@ export default function Home() {
         </Grid>
       )}
     </Grid>
+    
   );
 }

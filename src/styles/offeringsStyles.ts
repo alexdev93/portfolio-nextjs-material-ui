@@ -1,9 +1,15 @@
 import { css } from '@emotion/react';
+import { isMobile } from './../utils/mediaQueries';
+import createCustomTheme from './../theme';
+
+// Get theme values
+const theme = createCustomTheme();
 
 export const offeringsStyles = {
   section: css`
     min-height: 100vh;
-    background-color: #1f2937;
+    max-width: 100%;
+    background-color: ${theme.palette.primary.main};
     text-align: center;
     padding: 5rem 2rem;
     display: flex;
@@ -11,7 +17,7 @@ export const offeringsStyles = {
     justify-content: center;
   `,
   subtitle: css`
-    color: #9ca3af;
+    color: ${theme.palette.grey[100]};
     font-size: 1.125rem;
     max-width: 32rem;
     margin: 0 auto 0.5rem;
@@ -41,13 +47,20 @@ export const offeringsStyles = {
   `,
   grid: css`
     text-align: left;
-    max-width: 80rem;
+    width: 85%;
     margin: 0 auto;
+    
+     ${isMobile`
+      width: 100%;
+   `}
   `,
   card: css`
-    background-color: #374151;
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
     padding: 2.5rem;
     position: relative;
+    box-shadow: none;
     &:hover {
       box-shadow: 0.063rem 0.063rem 1.25rem 0.375rem rgb(0 0 0 / 53%);
     }
@@ -63,7 +76,7 @@ export const offeringsStyles = {
     }
   `,
   cardTitle: css`
-    color: #fff;
+    color: ${theme.palette.secondary.main};
     margin-bottom: 1rem;
     font-size: 1.5rem;
     @media (min-width: 1280px) {
@@ -71,7 +84,9 @@ export const offeringsStyles = {
     }
   `,
   cardDescription: css`
-    color: #9ca3af;
+    color: ${theme.palette.grey[100]};
+    line-height: 1rem;
+    letter-spacing: 2px;
     transition: color 0.8s;
     &:hover {
       color: #fff;
@@ -82,15 +97,14 @@ export const offeringsStyles = {
     width: 100%;
     height: 100%;
     z-index: 0;
-    background: url(${img}) no-repeat 50% 50% / cover;
-    clip-path: ${
-      index === 1
-        ? 'circle(calc(6.25rem + 7.5vw) at 100% 100%)'
-        : index === 2
+    background: ${theme.palette.secondary.main} no-repeat 50% 50% / cover;
+    clip-path: ${index === 1
+      ? 'circle(calc(6.25rem + 7.5vw) at 100% 100%)'
+      : index === 2
         ? 'circle(calc(6.25rem + 7.5vw) at 0% 100%)'
         : index === 3
-        ? 'circle(calc(6.25rem + 7.5vw) at 100% 0%)'
-        : 'circle(calc(6.25rem + 7.5vw) at 0% 0%)'
+          ? 'circle(calc(6.25rem + 7.5vw) at 100% 0%)'
+          : 'circle(calc(6.25rem + 7.5vw) at 0% 0%)'
     };
   `,
 };
