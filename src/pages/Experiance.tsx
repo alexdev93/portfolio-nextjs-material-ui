@@ -47,71 +47,81 @@ const experiences = [
   },
 ];
 
-const TimelineSection = () => {
+const Experiance = () => {
   return (
-    <Container>
-      <Typography variant="h4" align="center" gutterBottom>
-        My Timeline
-      </Typography>
-      <Grid container spacing={4}>
-        {experiences.map((experience, index) => (
-          <Grid item xs={12} md={6} key={index}>
-            <Box
-              sx={{
-                position: 'relative',
-                paddingLeft: '3rem',
-                borderLeft: '1px solid grey',
-                mb: '2rem',
-              }}
-            >
+    <Container style={{
+      minHeight: '120vh',
+      width: '100%',
+      maxWidth: '100%',
+      marginTop: 20,
+      marginBottom: 20,
+      display: 'grid',
+      placeItems: 'center'
+    }}>
+      <Container>
+        <Typography variant="h4" align="center" gutterBottom>
+          My Timeline
+        </Typography>
+        <Grid container spacing={4}>
+          {experiences.map((experience, index) => (
+            <Grid item xs={12} md={6} key={index}>
               <Box
                 sx={{
-                  position: 'absolute',
-                  left: '-25px',
-                  top: 0,
-                  backgroundColor: 'secondary.main',
-                  width: '50px',
-                  height: '50px',
-                  borderRadius: '50%',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
+                  position: 'relative',
+                  paddingLeft: '3rem',
+                  borderLeft: '1px solid grey',
+                  mb: '2rem',
                 }}
               >
-                {experience.icon}
+                <Box
+                  sx={{
+                    position: 'absolute',
+                    left: '-25px',
+                    top: 0,
+                    backgroundColor: 'secondary.main',
+                    width: '50px',
+                    height: '50px',
+                    borderRadius: '50%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                >
+                  {experience.icon}
+                </Box>
+                <Typography
+                  variant="body2"
+                  sx={{
+                    padding: '0.2rem 0.6rem',
+                    backgroundColor: 'grey.300',
+                    borderRadius: '15px',
+                    display: 'inline-block',
+                    textTransform: 'uppercase',
+                    fontWeight: '500',
+                    mb: '0.5rem',
+                  }}
+                >
+                  {experience.duration}
+                </Typography>
+                <Typography variant="h6" sx={{ fontWeight: 600 }}>
+                  {experience.title}
+                  {experience.company && (
+                    <span style={{ color: 'grey.600', fontWeight: 500 }}>
+                      {' '}
+                      - {experience.company}
+                    </span>
+                  )}
+                </Typography>
+                <Typography variant="body2" color="textSecondary">
+                  {experience.description}
+                </Typography>
               </Box>
-              <Typography
-                variant="body2"
-                sx={{
-                  padding: '0.2rem 0.6rem',
-                  backgroundColor: 'grey.300',
-                  borderRadius: '15px',
-                  display: 'inline-block',
-                  textTransform: 'uppercase',
-                  fontWeight: '500',
-                  mb: '0.5rem',
-                }}
-              >
-                {experience.duration}
-              </Typography>
-              <Typography variant="h6" sx={{ fontWeight: 600 }}>
-                {experience.title}
-                {experience.company && (
-                  <span style={{ color: 'grey.600', fontWeight: 500 }}>
-                    {' '}
-                    - {experience.company}
-                  </span>
-                )}
-              </Typography>
-              <Typography variant="body2" color="textSecondary">
-                {experience.description}
-              </Typography>
-            </Box>
-          </Grid>
-        ))}
-      </Grid>
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
     </Container>
   );
 };
 
-export default TimelineSection;
+export default Experiance;

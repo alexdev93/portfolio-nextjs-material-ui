@@ -2,17 +2,19 @@
 
 import React, { useEffect, useState } from 'react';
 import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
 import GlobalStyles from '../styles/GlobalStyles';
 import LoaderComponent from '../components/LoaderComponent';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import HomePage from './../pages/HomePage';
-import AboutPage from './../pages/AboutPage';
-import TimelinePage from './../pages/TimelinePage';
-import ExperiancePage from '../pages/ExperiancePage';
+import Details from '../pages/Details';
+import Education from '../pages/Education';
+import AboutMe from '../pages/AboutMe';
 import SkillsSection from '../pages/SkillsSection';
 import ContactPage from '../pages/ContactPage';
-import TimelineSection from '../pages/TimelineSection';
+import Experiance from '../pages/Experiance';
+import Offerings from '../pages/Offerings';
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -26,23 +28,24 @@ export default function Home() {
   }, []);
 
   return (
-    <Container id='page-container' >
+    <Grid style={{ width: '100%', maxWidth: '100%', padding: 0 }}>
       <GlobalStyles />
       {isLoading ? (
         <LoaderComponent />
       ) : (
-        <Container sx={{width: '100%'}} className={'home-page'}>
+        <Grid spacing={5} style={{ width: '100%', maxWidth: '100%', padding: 0, marginBottom: 10}} >
           <Navigation />
           <HomePage />
-          <AboutPage />
-          <TimelinePage />
-          <TimelineSection />
-          <ExperiancePage />
+          <Offerings />
+          {/* <Details /> */}
+          <Education />
+          <Experiance />
+          <AboutMe />
           <SkillsSection />
           <ContactPage />
           <Footer />
-        </Container>
+        </Grid>
       )}
-    </Container>
+    </Grid>
   );
 }

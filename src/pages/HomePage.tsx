@@ -18,7 +18,7 @@ const HomeHeader = () => {
         <LeftHeader className="left-header">
           <HShape className="h-shape"></HShape>
           <ImageContainer className="image card">
-            <img src='./static/asset/eye.jpg' alt="" />
+            <img src='./photo_2024-07-16_06-27-39.jpg' alt="" />
           </ImageContainer>
         </LeftHeader>
         <RightHeader className="right-header">

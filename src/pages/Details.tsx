@@ -6,7 +6,9 @@ import {
     StoryContainer,
     InfoContainer,
     Title,
-} from '../styles/AboutStyles';
+    StyledTypography,
+    StoryWrapper
+} from '../styles/DetailsStyles';
 
 const stories = [
     {
@@ -50,27 +52,21 @@ const stories = [
     },
 ];
 
-const AboutPage = () => (
-    <StorysContainer id="about" >
+const Details: React.FC = () => (
+    <StorysContainer id="about">
         <OuterContainer>
-
             {stories.map((story, index) => (
-                <StoryContainer key={index} isOdd={index % 2 !== 0}>
-                    <InfoContainer>
-                        {index !== stories.length - 1 ? (
+                <StoryWrapper key={index}>
+                    <StoryContainer isOdd={index % 2 !== 0}>
+                        <InfoContainer>
                             <Title>{story.title}</Title>
-                        ) : (
-                            <Typography variant="h3" gutterBottom>
-                                {story.title}
-                            </Typography>
-                        )}
-                        <Typography variant="body1">{story.text}</Typography>
-                    </InfoContainer>
-                    {index !== stories.length - 1}
-                </StoryContainer>
+                            <StyledTypography variant="body1">{story.text}</StyledTypography>
+                        </InfoContainer>
+                    </StoryContainer>
+                </StoryWrapper>
             ))}
         </OuterContainer>
-  </StorysContainer >
+    </StorysContainer>
 );
 
-export default AboutPage;
+export default Details;

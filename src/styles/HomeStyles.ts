@@ -1,12 +1,14 @@
 // HeaderStyles.js
 import styled from '@emotion/styled';
+import { isMobile } from './../utils/mediaQueries';
 
 export const Header = styled.header`
-  min-height: 100vh;
+  min-height: 120vh;
   color: var(--color-white);
   overflow: hidden;
   padding: 0 !important;
   background-color: var(--color-primary);
+  margin-bottom: 10;
 `;
 
 export const HeaderContent = styled.div`
@@ -19,24 +21,40 @@ export const HeaderContent = styled.div`
     grid-template-columns: repeat(1, 1fr);
     padding-bottom: 6rem;
   }
+
+  ${isMobile`
+    margin: 0 auto;
+    width: 90%;
+   `}
+  
 `;
 
 export const LeftHeader = styled.div`
   position: relative;
   display: flex;
   align-items: center;
+
+  ${isMobile`
+    margin-left: 0;
+    height: 50%;
+   `}
 `;
 
 export const HShape = styled.div`
   transition: all 0.4s ease-in-out;
   width: 65%;
   height: 100%;
-  background-color: var(--color-secondary);
+  background-color: green;
   position: absolute;
   left: 0;
   top: 0;
   z-index: -1;
   clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
+
+  ${isMobile`
+   display: none;
+  `}
+
 `;
 
 export const ImageContainer = styled.div`
@@ -45,6 +63,7 @@ export const ImageContainer = styled.div`
   width: 100%;
   margin-left: 4rem;
   background-color: var(--color-black);
+  overflow: hidden; /* Ensures the image does not overflow the container */
   transition: all 0.4s ease-in-out;
 
   img {
@@ -57,6 +76,11 @@ export const ImageContainer = styled.div`
   &:hover {
     filter: grayscale(100%);
   }
+
+  ${isMobile`
+    margin-left: 0; /* Adjust the margin for mobile devices */
+    height: 60vh; /* Adjust the height for mobile devices */
+  `}
 `;
 
 export const RightHeader = styled.div`

@@ -8,9 +8,9 @@ import {
   CardHeader,
   CardTitle,
   CardDate,
-  CardSubtitle,
   CardDetail,
-} from '../styles/TimelineStyles';
+} from '../styles/EducationStyles';
+import { Container } from '@mui/material';
 
 const data = [
   {
@@ -50,23 +50,25 @@ const data = [
   },
 ];
 
-const TimelinePage: React.FC = () => {
+const Education: React.FC = () => {
   return (
-    <OuterContainer>
-      <Heading>Education & Experience</Heading>
-      {data.map((item, index) => (
-        <StickyCard key={index} bgColor={item.bgColor}>
-          <CardHeader>
-            <CardDate>{item.date}</CardDate>
-            {item.title && <CardTitle>{item.title}</CardTitle>}
-          </CardHeader>
-          <CardBody>
-            <CardDetail>{item.detail}</CardDetail>
-          </CardBody>
-        </StickyCard>
-      ))}
-    </OuterContainer>
+    <Container>
+      <OuterContainer>
+        <Heading>Education & Experience</Heading>
+        {data.map((item, index) => (
+          <StickyCard key={index} bgColor={item.bgColor}>
+            <CardHeader>
+              <CardDate>{item.date}</CardDate>
+              {item.title && <CardTitle>{item.title}</CardTitle>}
+            </CardHeader>
+            <CardBody>
+              <CardDetail>{item.detail}</CardDetail>
+            </CardBody>
+          </StickyCard>
+        ))}
+      </OuterContainer>
+    </Container>
   );
 };
 
-export default TimelinePage;
+export default Education;

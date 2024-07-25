@@ -18,26 +18,36 @@ const skills = [
 const SkillsSection = () => {
   const classes = skillsStyles(theme);
   return (
-    <Container>
-      <Box sx={classes.aboutStats}>
-        <Typography variant="h4" sx={classes.statTitle}>My Skills</Typography>
-        <Grid container spacing={4} sx={classes.progressBars}>
-          {skills.map((skill, index) => (
-            <Grid item xs={12} key={index}>
-              <Box sx={classes.progressBar}>
-                <Typography variant="body1" sx={classes.progTitle}>{skill.title}</Typography>
-                <Box sx={classes.progressCon}>
-                  <Box sx={classes.progress}>
-                    <Box sx={{ ...classes.progressInner, width: skill.width, backgroundColor: skill.color }} />
+    <Container style={{
+      minHeight: '100vh',
+      width: '100%',
+      maxWidth: '100%',
+      padding: 0,
+      marginBottom: 10,
+      display: 'grid',
+      placeItems: 'center'
+    }}>
+      <Container>
+        <Box sx={classes.aboutStats}>
+          <Typography variant="h4" sx={classes.statTitle}>My Skills</Typography>
+          <Grid container spacing={4} sx={classes.progressBars}>
+            {skills.map((skill, index) => (
+              <Grid item xs={12} key={index}>
+                <Box sx={classes.progressBar}>
+                  <Typography variant="body1" sx={classes.progTitle}>{skill.title}</Typography>
+                  <Box sx={classes.progressCon}>
+                    <Box sx={classes.progress}>
+                      <Box sx={{ ...classes.progressInner, width: skill.width, backgroundColor: skill.color }} />
+                    </Box>
+                    <Typography variant="body2" sx={classes.progText}>{skill.width}</Typography>
                   </Box>
-                  <Typography variant="body2" sx={classes.progText}>{skill.width}</Typography>
                 </Box>
-              </Box>
-            </Grid>
-          ))}
-        </Grid>
-      </Box>
-    </Container>
+              </Grid>
+            ))}
+          </Grid>
+        </Box>
+      </Container>
+    </Container >
   );
 };
 

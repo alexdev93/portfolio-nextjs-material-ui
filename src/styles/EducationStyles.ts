@@ -1,26 +1,38 @@
-// TimelineStyles.ts
 import styled from '@emotion/styled';
+import { Container as MuiContainer } from '@mui/material';
+
+export const Container = styled(MuiContainer)`
+  min-height: 120vh;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin-bottom: 10px;
+  display: grid;
+  place-items: center;
+  background-color: #f5f5f5;
+`;
 
 export const OuterContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 0;
-  margin: 0;
+  padding: 0 20px;
   align-items: center;
 `;
 
 export const Heading = styled.h1`
   color: #333;
-  margin-bottom: 20px;
-  font-size: 2rem;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 700;
 `;
 
 export const StickyCard = styled.div<{ bgColor: string }>`
   width: 90%;
   max-width: 600px;
   padding: 20px;
-//   border-radius: 10px;
+  border-radius: 10px;
   color: #fff;
   margin: 20px 0;
   position: relative;
@@ -28,39 +40,35 @@ export const StickyCard = styled.div<{ bgColor: string }>`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
   &:nth-of-type(even) {
-    margin-left: auto;
+    align-self: flex-end;
   }
 
   &:nth-of-type(odd) {
-    margin-right: auto;
+    align-self: flex-start;
   }
 
   @media (max-width: 768px) {
     width: 95%;
-    margin: 10px 0;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 10px auto;
   }
 `;
 
 export const CardBody = styled.div`
-  position: relative;
   padding: 20px;
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
+  border-radius: 0 0 10px 10px;
 `;
 
 export const CardHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.2);
   padding: 10px 20px;
   border-radius: 10px 10px 0 0;
-  margin-bottom: 15px;
 `;
 
-export const CardTitle = styled.h1`
+export const CardTitle = styled.h2`
   font-size: 1.5rem;
   color: #fff;
   font-weight: 600;
@@ -80,14 +88,9 @@ export const CardDate = styled.span`
   }
 `;
 
-export const CardSubtitle = styled.h4`
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  color: #fff;
-`;
-
 export const CardDetail = styled.p`
   font-size: 1rem;
   color: #fff;
   line-height: 1.5;
+  margin: 0;
 `;

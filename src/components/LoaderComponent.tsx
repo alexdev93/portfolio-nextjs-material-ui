@@ -24,7 +24,7 @@ const LoaderComponent: React.FC = () => {
         <PencilEraser />
       </Pencil>
       <Line />
-      <LoadText>Page Loading... Please Wait</LoadText>
+      <LoadText> Loading... </LoadText>
     </LoaderContainer>
   );
 };
