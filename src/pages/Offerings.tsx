@@ -42,7 +42,7 @@ const CardContentWrapper = styled(CardContent)<{ index: number }>`
 
 const Offerings: React.FC = () => {
   return (
-    <Section>
+    <Section id="about">
       <Subtitle variant="subtitle1">
         what we&apos;re offering
         <svg

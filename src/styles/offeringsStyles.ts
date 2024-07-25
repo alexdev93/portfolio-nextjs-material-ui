@@ -58,15 +58,8 @@ export const offeringsStyles = {
     background-color: transparent;
     border-radius: 0;
     border: none;
-    padding: 2.5rem;
     position: relative;
     box-shadow: none;
-    &:hover {
-      box-shadow: 0.063rem 0.063rem 1.25rem 0.375rem rgb(0 0 0 / 53%);
-    }
-    ${isMobile`
-      padding: 1rem;
-   `}
   `,
   cardContent: (index: number) => css`
     position: relative;
@@ -102,12 +95,16 @@ export const offeringsStyles = {
     z-index: 0;
     background: ${theme.palette.secondary.main} no-repeat 50% 50% / cover;
     clip-path: ${index === 1
-      ? 'circle(calc(5.25rem + 7.5vw) at 100% 100%)'
+      ? 'circle(calc(2.25rem + 7.5vw) at 100% 100%)'
       : index === 2
-        ? 'circle(calc(5.25rem + 7.5vw) at 0% 100%)'
+        ? 'circle(calc(2.25rem + 7.5vw) at 0% 100%)'
         : index === 3
-          ? 'circle(calc(5.25rem + 7.5vw) at 100% 0%)'
-          : 'circle(calc(5rem + 7.5vw) at 0% 0%)'
+          ? 'circle(calc(2.25rem + 7.5vw) at 100% 0%)'
+          : 'circle(calc(2.25rem + 7.5vw) at 0% 0%)'
     };
+     ${isMobile`
+      clip-path: none;
+      background: transparent;
+   `}
   `,
 };

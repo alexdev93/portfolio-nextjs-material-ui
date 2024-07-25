@@ -56,7 +56,7 @@ const ContactPage: React.FC = () => {
       display: 'grid',
       placeItems: 'center',
       marginBottom: 10,
-    }}>
+    }} id="contact"> 
       <Container sx={contactPageStyles.container}>
         <Typography variant="h4" sx={contactPageStyles.title}>
           Contact Me
