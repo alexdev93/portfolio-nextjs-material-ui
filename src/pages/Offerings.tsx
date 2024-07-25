@@ -97,7 +97,9 @@ const Offerings: React.FC = () => {
         ].map((offer, index) => (
           <Grid item xs={12} sm={6} key={index}>
             <StyledCard>
-              <Circle img={offer.img} index={index + 1} />
+              <AnimatedBox variant="fadeIn">
+                <Circle img={offer.img} index={index + 1} />
+              </AnimatedBox>
               <AnimatedBox variant="fadeInDown">
                 <CardContentWrapper index={index + 1}>
                   <TitleTypo variant="h2" >

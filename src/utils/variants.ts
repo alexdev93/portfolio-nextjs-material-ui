@@ -10,7 +10,7 @@ export const variants = {
     },
     fadeIn: {
       hidden: { opacity: 0 },
-      visible: { opacity: 1, transition: { duration: 0.6 } },
+      visible: { opacity: 1, transition: { duration: 1 } },
     },
     slideInLeft: {
       hidden: { opacity: 0, x: -100 },
