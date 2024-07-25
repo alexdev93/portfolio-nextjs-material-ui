@@ -50,11 +50,9 @@ const experiences = [
 const Experiance = () => {
   return (
     <Container style={{
-      minHeight: '120vh',
+      minHeight: '100vh',
       width: '100%',
       maxWidth: '100%',
-      marginTop: 20,
-      marginBottom: 20,
       display: 'grid',
       placeItems: 'center'
     }}>

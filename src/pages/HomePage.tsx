@@ -20,14 +20,12 @@ const HomeHeader = () => {
         <LeftHeader className="left-header">
           <HShape className="h-shape"></HShape>
           <ImageContainer>
-            <AnimatedBox variant="fadeInUp">
-              <Image
-                src='/photo_2024-07-16_06-27-39.jpg'
-                alt=""
-                layout='fill' // Fill the container
-                objectFit='cover'
-              />
-            </AnimatedBox>
+            <Image
+              src='/photo_2024-07-16_06-27-39.jpg'
+              alt=""
+              layout='fill' // Fill the container
+              objectFit='cover'
+            />
           </ImageContainer>
         </LeftHeader>
         <RightHeader className="right-header">

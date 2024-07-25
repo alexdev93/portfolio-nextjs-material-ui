@@ -26,7 +26,6 @@ const SkillsSection = () => {
       width: '100%',
       maxWidth: '100%',
       padding: 0,
-      marginBottom: 10,
       display: 'grid',
       placeItems: 'center'
     }}>

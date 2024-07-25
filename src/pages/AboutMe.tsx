@@ -10,11 +10,10 @@ const AboutMe = () => {
 
   return (
     <Container style={{
-      minHeight: '120vh',
+      minHeight: '100vh',
       width: '100%',
       maxWidth: '100%',
       padding: 20,
-      marginBottom: 10,
       display: 'grid',
       placeItems: 'center'
     }}>
