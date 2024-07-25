@@ -94,6 +94,14 @@ export const offeringsStyles = {
     height: 100%;
     z-index: 0;
     background: ${theme.palette.secondary.main} no-repeat 50% 50% / cover;
+    background: ${index === 1
+      ? '#A3BFAA no-repeat 50% 50% / cover'
+      : index === 2
+        ? '#7EA672 no-repeat 50% 50% / cover'
+        : index === 3
+          ? '#7292A6 no-repeat 50% 50% / cover'
+          : '#71A63C no-repeat 50% 50% / cover'
+    };
     clip-path: ${index === 1
       ? 'circle(calc(2.25rem + 7.5vw) at 100% 100%)'
       : index === 2
