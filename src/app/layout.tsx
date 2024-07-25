@@ -2,8 +2,7 @@ import React from 'react';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { Grid } from '@mui/material';
-import theme from '../styles/theme';
-import '../styles/GlobalStyles.css';
+import theme from './../theme';
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Typography, Grid, Container } from '@mui/material';
 import skillsStyles from '../styles/skillsStyles';
-import theme from '../styles/theme';
+import { useTheme } from '@mui/material/styles';
 
 const skills = [
   { title: 'HTML5', width: '80%', color: '#E44D26' },
@@ -16,7 +16,10 @@ const skills = [
 ];
 
 const SkillsSection = () => {
+
+  const theme = useTheme();
   const classes = skillsStyles(theme);
+  
   return (
     <Container style={{
       minHeight: '100vh',

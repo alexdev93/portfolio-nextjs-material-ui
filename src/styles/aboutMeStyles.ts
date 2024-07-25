@@ -3,7 +3,7 @@ import { SxProps, Theme } from '@mui/material/styles';
 const aboutMeStyles = (theme: Theme): Record<string, SxProps<Theme>> => ({
   aboutSection: {
     padding: '2em',
-    color: theme.palette.text.primary,
+    color: theme.palette.primary.main,
   },
   mainTitle: {
     marginBottom: '3.5rem',

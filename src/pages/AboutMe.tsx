@@ -2,9 +2,10 @@ import React from 'react';
 import { Box, Typography, Button, Grid, Card, CardContent, Container } from '@mui/material';
 import DownloadIcon from '@mui/icons-material/Download';
 import aboutMeStyles from '../styles/aboutMeStyles';
-import theme from '../styles/theme';
+import { useTheme } from '@mui/material/styles';
 
 const AboutMe = () => {
+  const theme = useTheme();
   const classes = aboutMeStyles(theme);
 
   return (

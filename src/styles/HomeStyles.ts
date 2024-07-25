@@ -1,13 +1,16 @@
 // HeaderStyles.js
 import styled from '@emotion/styled';
 import { isMobile } from './../utils/mediaQueries';
+import createCustomTheme from './../theme';
+
+// Get theme values
+const theme = createCustomTheme();
 
 export const Header = styled.header`
-  min-height: 120vh;
-  color: var(--color-white);
+  color: ${theme.palette.common.white};
   overflow: hidden;
   padding: 0 !important;
-  background-color: var(--color-primary);
+  background-color: ${theme.palette.primary.main};
   margin-bottom: 10;
 `;
 
@@ -26,17 +29,16 @@ export const HeaderContent = styled.div`
     margin: 0 auto;
     width: 90%;
    `}
-  
 `;
 
 export const LeftHeader = styled.div`
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
 
   ${isMobile`
     margin-left: 0;
-    height: 50%;
    `}
 `;
 
@@ -44,27 +46,29 @@ export const HShape = styled.div`
   transition: all 0.4s ease-in-out;
   width: 65%;
   height: 100%;
-  background-color: green;
+  background-color: ${theme.palette.secondary.main};
   position: absolute;
   left: 0;
   top: 0;
-  z-index: -1;
+  z-index: 0;
   clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
 
   ${isMobile`
    display: none;
   `}
-
 `;
 
 export const ImageContainer = styled.div`
   border-radius: 14px;
   height: 90%;
-  width: 100%;
+  width: 70%;
   margin-left: 4rem;
-  background-color: var(--color-black);
+  background-color: ${theme.palette.common.black};
   overflow: hidden; /* Ensures the image does not overflow the container */
   transition: all 0.4s ease-in-out;
+  z-index: 2;
+  display: grid;
+  place-items: center;
 
   img {
     width: 100%;
@@ -78,6 +82,7 @@ export const ImageContainer = styled.div`
   }
 
   ${isMobile`
+    width: 100%;
     margin-left: 0; /* Adjust the margin for mobile devices */
     height: 60vh; /* Adjust the height for mobile devices */
   `}
@@ -107,7 +112,7 @@ export const Name = styled.h1`
   }
 
   span {
-    color: var(--color-secondary);
+    color: ${theme.palette.secondary.main};
   }
 `;
 
@@ -121,7 +126,7 @@ export const MainButton = styled.a`
   color: inherit;
   font-weight: 600;
   position: relative;
-  border: 1px solid var(--color-secondary);
+  border: 1px solid ${theme.palette.secondary.main};
   display: flex;
   align-self: flex-start;
   align-items: center;
@@ -133,7 +138,7 @@ export const MainButton = styled.a`
   }
 
   .btn-icon {
-    background-color: var(--color-secondary);
+    background-color: ${theme.palette.secondary.main};
     display: flex;
     align-items: center;
     justify-content: center;
@@ -144,7 +149,7 @@ export const MainButton = styled.a`
   &:hover::before {
     width: 100%;
     height: 100%;
-    background-color: var(--color-secondary);
+    background-color: ${theme.palette.secondary.main};
     transform: translateX(0);
   }
 
