@@ -67,15 +67,9 @@ export const ImageContainer = styled.div`
   overflow: hidden; /* Ensures the image does not overflow the container */
   transition: all 0.4s ease-in-out;
   z-index: 2;
+  position: relative; /* Make sure the container is positioned for the image */
   display: grid;
   place-items: center;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: all 0.4s ease-in-out;
-  }
 
   &:hover {
     filter: grayscale(100%);

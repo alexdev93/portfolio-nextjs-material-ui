@@ -44,7 +44,7 @@ const Offerings: React.FC = () => {
   return (
     <Section>
       <Subtitle variant="subtitle1">
-        what we're offering
+        what we&apos;re offering
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
