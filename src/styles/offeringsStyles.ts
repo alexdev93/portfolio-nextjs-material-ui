@@ -32,7 +32,7 @@ export const offeringsStyles = {
     height: '1.5rem',
   },
   heading: css`
-    color: #fff;
+    color: #beebd0;
     font-size: 2.25rem;
     font-weight: 600;
     max-width: 48rem;
@@ -72,7 +72,7 @@ export const offeringsStyles = {
     }
   `,
   cardTitle: css`
-    color: ${theme.palette.common.white};
+    color: #a3c9ac;
     margin-bottom: 1rem;
     font-size: 1.5rem;
     @media (min-width: 1280px) {
@@ -97,10 +97,10 @@ export const offeringsStyles = {
     clip-path: ${index === 1
       ? 'circle(calc(2.25rem + 7.5vw) at 100% 100%)'
       : index === 2
-        ? 'circle(calc(2.25rem + 7.5vw) at 0% 100%)'
+        ? 'circle(calc(1rem + 7.5vw) at 0% 100%)'
         : index === 3
           ? 'circle(calc(2.25rem + 7.5vw) at 100% 0%)'
-          : 'circle(calc(2.25rem + 7.5vw) at 0% 0%)'
+          : 'circle(calc(1rem + 7.5vw) at 0% 0%)'
     };
      ${isMobile`
       clip-path: none;

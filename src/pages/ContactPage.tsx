@@ -3,48 +3,8 @@
 import React from 'react';
 import { Container, Grid, Typography, TextField, Button, Box, Link as MuiLink } from '@mui/material';
 import { Email, Phone, LocationOn } from '@mui/icons-material';
-import { SxProps, Theme } from '@mui/material/styles';
+import contactPageStyles from '@/styles/contactStyles';
 
-const contactPageStyles: Record<string, SxProps<Theme>> = {
-  container: {
-    padding: '2em',
-  },
-  title: {
-    marginBottom: '2em',
-    textAlign: 'center',
-    fontWeight: 'bold',
-  },
-  section: {
-    marginBottom: '2em',
-  },
-  contactInfo: {
-    color: '#333',
-  },
-  contactItem: {
-    display: 'flex',
-    alignItems: 'center',
-    marginBottom: '1em',
-  },
-  contactIcon: {
-    marginRight: '0.5em',
-  },
-  form: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '1em',
-  },
-  formField: {
-    width: '100%',
-  },
-  submitButton: {
-    alignSelf: 'flex-start',
-    backgroundColor: '#007bff',
-    color: '#fff',
-    '&:hover': {
-      backgroundColor: '#0056b3',
-    },
-  },
-};
 
 const ContactPage: React.FC = () => {
   return (
@@ -87,7 +47,7 @@ const ContactPage: React.FC = () => {
           </Grid>
           <Grid item xs={12} md={6}>
             <Box sx={contactPageStyles.section}>
-              <Typography variant="h6" sx={{ marginBottom: '1em' }}>Send Me a Message</Typography>
+              <Typography variant="h6" sx={{ marginBottom: '1em', color: '#fff' }}>Send Me a Message</Typography>
               <Box component="form" sx={contactPageStyles.form}>
                 <TextField
                   label="Name"

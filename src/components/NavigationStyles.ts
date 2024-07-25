@@ -17,7 +17,7 @@ export const ControlsContainer = styled.nav`
   transform: translateY(-50%);
   
   @media (max-width: 700px) {
-    gap:1.5rem;
+    gap:0.5rem;
     top: auto;
     bottom: 0;
     flex-direction: row;
