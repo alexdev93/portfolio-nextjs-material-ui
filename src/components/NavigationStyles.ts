@@ -15,8 +15,9 @@ export const ControlsContainer = styled.nav`
   align-items: center;
   justify-content: center;
   transform: translateY(-50%);
-
+  
   @media (max-width: 700px) {
+    gap:1.5rem;
     top: auto;
     bottom: 0;
     flex-direction: row;
@@ -37,8 +38,8 @@ export const Control = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0.7rem 0;
-  box-shadow: var(--box-shadow-1);
+  margin: 1rem 0;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, .3);
 
   &:hover {
     background-color: ${theme.palette.secondary.main};
