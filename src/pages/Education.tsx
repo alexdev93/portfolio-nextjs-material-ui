@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Typography, Box, Paper, Grid, styled } from '@mui/material';
 import SchoolIcon from '@mui/icons-material/School';
 import createCustomTheme from './../theme';
+import AnimatedBox from '../components/AnimatedBox';
 
 // Get theme values
 const theme = createCustomTheme();
@@ -76,27 +77,29 @@ const Education: React.FC = () => {
   ];
 
   return (
-    <Container style={{width: "100%", maxWidth: "100%", backgroundColor: "#191d2b"}}>
+    <Container style={{ width: "100%", maxWidth: "100%", backgroundColor: "#191d2b" }}>
 
-    <EducationContainer>
-      <Heading>
-        Education
-      </Heading>
-      <Grid container spacing={4} justifyContent="center">
-        {educationData.map((edu, index) => (
-          <Grid item xs={12} sm={6} md={4} key={index}>
-            <EducationItem>
-              <SchoolIcon sx={{color: '#9BF2EA'}} fontSize="large" />
-              <EducationDetails>
-                <SchoolName variant="h6">{edu.school}</SchoolName>
-                <Degree variant="subtitle1">{edu.degree}</Degree>
-                <Typography variant="body2">{edu.year}</Typography>
-              </EducationDetails>
-            </EducationItem>
-          </Grid>
-        ))}
-      </Grid>
-    </EducationContainer>
+      <EducationContainer>
+        <Heading>
+          Education
+        </Heading>
+        <Grid container spacing={4} justifyContent="center">
+          {educationData.map((edu, index) => (
+            <Grid item xs={12} sm={6} md={4} key={index}>
+              <AnimatedBox variant='fadeIn'>
+                <EducationItem>
+                  <SchoolIcon sx={{ color: '#9BF2EA' }} fontSize="large" />
+                  <EducationDetails>
+                    <SchoolName variant="h6">{edu.school}</SchoolName>
+                    <Degree variant="subtitle1">{edu.degree}</Degree>
+                    <Typography variant="body2">{edu.year}</Typography>
+                  </EducationDetails>
+                </EducationItem>
+              </AnimatedBox>
+            </Grid>
+          ))}
+        </Grid>
+      </EducationContainer>
     </Container>
   );
 };

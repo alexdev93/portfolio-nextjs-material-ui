@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Typography, Grid, Container } from '@mui/material';
 import { Work, School } from '@mui/icons-material';
 import { styled } from '@mui/system';
+import AnimatedBox from '../components/AnimatedBox';
 
 const experiences = [
   {
@@ -127,9 +128,11 @@ const Experiance = () => {
                     </span>
                   )}
                 </Typography>
-                <Typography variant="body2" color="#dbe1e8">
-                  {experience.description}
-                </Typography>
+                <AnimatedBox variant="slideInRight">
+                  <Typography variant="body2" color="#dbe1e8">
+                    {experience.description}
+                  </Typography>
+                </AnimatedBox>
               </Box>
             </Grid>
           ))}

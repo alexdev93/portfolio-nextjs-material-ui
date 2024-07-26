@@ -17,7 +17,7 @@ const footerStyles: Record<string, SxProps<Theme>> = {
     padding: '20px',
   },
   sectionTitle: {
-    color: '#e6e8ea',
+    color: '#27AE60',
   },
   link: {
     color: '#afb1b4',

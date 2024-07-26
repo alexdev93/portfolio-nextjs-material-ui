@@ -15,7 +15,7 @@ const contactPageStyles: Record<string, SxProps<Theme>> = {
     marginBottom: '2em',
     textAlign: 'center',
     fontWeight: 'bold',
-    color: theme.palette.common.white,
+    color: theme.palette.secondary.main,
   },
   section: {
     marginBottom: '2em',
@@ -40,22 +40,25 @@ const contactPageStyles: Record<string, SxProps<Theme>> = {
     color: theme.palette.common.white,
   },
   formField: {
-    border: '1px solid #7297A6',
     width: '100%',
     color: theme.palette.common.white,
     '& .MuiOutlinedInput-root': {
       '& fieldset': {
-        borderColor: '#7297A6',
+        border: '0.5px solid ',
+        borderColor: '#799c81', 
       },
       '&:hover fieldset': {
-        borderColor: theme.palette.secondary.main,
+        borderColor: theme.palette.grey[500],
       },
       '&.Mui-focused fieldset': {
-        borderColor: theme.palette.primary.main,
+        borderColor: theme.palette.secondary.main,
       },
-      '& .MuiInputBase-input': {
-        color: theme.palette.common.white,
-      },
+    },
+  },
+  labelField: {
+    color: '#799c81',
+    '&.Mui-focused': {
+      color: theme.palette.secondary.main,
     },
   },
   submitButton: {

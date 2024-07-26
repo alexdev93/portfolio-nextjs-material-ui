@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react';
-import { Box, Typography } from '@mui/material';
-import { useInView } from 'react-intersection-observer'; // Import your hook
+import { Typography } from '@mui/material';
+import { useInView } from 'react-intersection-observer';
 
 interface CounterProps {
     targetNumber: number;

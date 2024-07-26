@@ -61,12 +61,14 @@ export const ImageContainer = styled.div`
   width: 70%;
   margin-left: 4rem;
   background-color: ${theme.palette.common.black};
-  overflow: hidden; /* Ensures the image does not overflow the container */
+  overflow: hidden; 
   transition: all 0.4s ease-in-out;
   z-index: 2;
-  position: relative; /* Make sure the container is positioned for the image */
+  position: relative; 
   display: grid;
   place-items: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), /* Larger shadow */
+              0 6px 6px rgba(0, 0, 0, 0.23);
 
   &:hover {
     filter: grayscale(100%);

@@ -11,7 +11,7 @@ interface AnimatedBoxProps extends BoxProps {
 
 const AnimatedBox: React.FC<AnimatedBoxProps> = ({ variant, children, ...boxProps }) => {
   const [ref, inView] = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
     threshold: 0.1,
   });
 

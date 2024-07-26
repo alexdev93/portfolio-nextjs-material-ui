@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Typography, Grid, Container } from '@mui/material';
 import skillsStyles from '../styles/skillsStyles';
 import { useTheme } from '@mui/material/styles';
+import AnimatedBox from '../components/AnimatedBox';
 
 const skills = [
   { title: 'HTML5', width: '80%', color: '#E44D26' },
@@ -19,7 +20,7 @@ const SkillsSection = () => {
 
   const theme = useTheme();
   const classes = skillsStyles(theme);
-  
+
   return (
     <Container style={{
       minHeight: '100vh',
@@ -31,7 +32,7 @@ const SkillsSection = () => {
       display: 'grid',
       placeItems: 'center'
     }}>
-      <Container style={{width: '80%'}}>
+      <Container style={{ width: '80%' }}>
         <Box sx={classes.aboutStats}>
           <Typography variant="h4" sx={classes.statTitle}>My Skills</Typography>
           <Grid container spacing={4} sx={classes.progressBars}>
@@ -39,12 +40,14 @@ const SkillsSection = () => {
               <Grid item xs={12} key={index}>
                 <Box sx={classes.progressBar}>
                   <Typography variant="body1" sx={classes.progTitle}>{skill.title}</Typography>
-                  <Box sx={classes.progressCon}>
-                    <Box sx={classes.progress}>
-                      <Box sx={{ ...classes.progressInner, width: skill.width, backgroundColor: skill.color }} />
+                  <AnimatedBox variant="slideInLeft">
+                    <Box sx={classes.progressCon}>
+                      <Box sx={classes.progress}>
+                        <Box sx={{ ...classes.progressInner, width: skill.width, backgroundColor: skill.color }} />
+                      </Box>
+                      <Typography variant="body2" sx={classes.progText}>{skill.width}</Typography>
                     </Box>
-                    <Typography variant="body2" sx={classes.progText}>{skill.width}</Typography>
-                  </Box>
+                  </AnimatedBox>
                 </Box>
               </Grid>
             ))}
