@@ -33,7 +33,7 @@ const aboutMeStyles = (isMobile: boolean): Record<string, SxProps<Theme>> => ({
     width: '100%',
     diplay: 'grid',
     placeItems: 'center',
-    marginLeft: isMobile ? 0 : '',
+    marginLeft: isMobile ? -2 : '',
   },
   leftAbout: {
     padding: '1rem',

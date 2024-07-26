@@ -72,18 +72,19 @@ const Experiance = () => {
     }}>
       <Container style={{
         width: '80%',
-        color: '#fff'
+        color: '#fff',
+        padding: 0,
       }}>
         <Header>
           <Typography variant="h4">Experiance</Typography>
         </Header>
-        <Grid container spacing={4}>
+        <Grid container spacing={4} style={{marginLeft:"-20px",}}>
           {experiences.map((experience, index) => (
             <Grid item xs={12} md={6} key={index}>
               <Box
                 sx={{
                   position: 'relative',
-                  paddingLeft: '3rem',
+                  paddingLeft: '1rem',
                   borderLeft: '1px solid grey',
                   mb: '2rem',
                 }}
