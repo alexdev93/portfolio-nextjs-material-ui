@@ -1,5 +1,4 @@
-// components/LoaderStyles.tsx
-
+'use client'
 import styled from '@emotion/styled';
 import createCustomTheme from './../theme';
 

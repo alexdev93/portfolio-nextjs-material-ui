@@ -1,6 +1,7 @@
+'use client'
 import React from 'react';
 import { Box, Typography, Grid, Container } from '@mui/material';
-import skillsStyles from '../styles/skillsStyles';
+import skillsStyles from '../styles/skillStyles';
 import { useTheme } from '@mui/material/styles';
 import AnimatedBox from '../components/AnimatedBox';
 
@@ -16,7 +17,7 @@ const skills = [
   { title: 'JavaScript', width: '95%', color: '#F7DF1E' },
 ];
 
-const SkillsSection = () => {
+const Skills = () => {
 
   const theme = useTheme();
   const classes = skillsStyles(theme);
@@ -58,4 +59,4 @@ const SkillsSection = () => {
   );
 };
 
-export default SkillsSection;
+export default Skills;

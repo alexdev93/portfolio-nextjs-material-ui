@@ -1,3 +1,4 @@
+'use client'
 import { useTheme, useMediaQuery } from '@mui/material';
 
 const useIsMobile = () => {

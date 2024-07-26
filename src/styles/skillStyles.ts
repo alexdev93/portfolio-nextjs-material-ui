@@ -1,3 +1,4 @@
+'use client'
 import { SxProps, Theme } from '@mui/material/styles';
 
 const skillsStyles = (theme: Theme): Record<string, SxProps<Theme>> => ({

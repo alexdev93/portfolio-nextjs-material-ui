@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import {
   Header,
@@ -12,7 +13,7 @@ import {
 } from '../styles/HomeStyles';
 import Image from 'next/image';
 import AnimatedBox from '../components/AnimatedBox';
-import useIsMobile from './../utils/mediaQueries';
+import useIsMobile from '../utils/mediaQueries';
 
 const HomeHeader = () => {
   const isMobile = useIsMobile();

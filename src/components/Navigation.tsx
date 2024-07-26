@@ -1,3 +1,4 @@
+'use client'
 import React, { useRef } from 'react';
 import { IconButton } from '@mui/material';
 import { ControlsContainer, Control } from './NavigationStyles'; // Ensure these styles are correctly imported

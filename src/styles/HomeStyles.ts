@@ -1,4 +1,4 @@
-// HeaderStyles.js
+'use client'
 import styled from '@emotion/styled';
 import createCustomTheme from './../theme';
 
@@ -67,9 +67,8 @@ export const ImageContainer = styled.div`
   position: relative; 
   display: grid;
   place-items: center;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), /* Larger shadow */
-              0 6px 6px rgba(0, 0, 0, 0.23);
-
+ box-shadow: 0 10px 20px rgba(126, 166, 114, 0.3), /* Larger shadow */
+            0 6px 6px rgba(126, 166, 114, 0.23); /* Smaller shadow */
   &:hover {
     filter: grayscale(100%);
   }

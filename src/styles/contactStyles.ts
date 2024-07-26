@@ -1,11 +1,12 @@
-// contactPageStyles.ts
+// src/styles/contactStyles.ts
+
 import { SxProps, Theme } from '@mui/material/styles';
 import createCustomTheme from './../theme';
 
 // Get theme values
 const theme = createCustomTheme();
 
-const contactPageStyles: Record<string, SxProps<Theme>> = {
+const contactStyles: Record<string, SxProps<Theme>> = {
   container: {
     padding: '2em',
     backgroundColor: theme.palette.primary.main,
@@ -45,7 +46,7 @@ const contactPageStyles: Record<string, SxProps<Theme>> = {
     '& .MuiOutlinedInput-root': {
       '& fieldset': {
         border: '0.5px solid ',
-        borderColor: '#799c81', 
+        borderColor: '#799c81',
       },
       '&:hover fieldset': {
         borderColor: theme.palette.grey[500],
@@ -71,4 +72,4 @@ const contactPageStyles: Record<string, SxProps<Theme>> = {
   },
 };
 
-export default contactPageStyles;
+export default contactStyles;

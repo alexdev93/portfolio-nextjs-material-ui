@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import { Container, Typography, Box, Paper, Grid, styled } from '@mui/material';
 import SchoolIcon from '@mui/icons-material/School';

@@ -5,10 +5,10 @@ import { Grid } from '@mui/material';
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <html lang="en">
-      <body style={{backgroundColor: '#191d2b'}} >
-        <CssBaseline />
+      <body>
+          <CssBaseline />
 
-        <Grid style={{ minHeight: '100vh', width: '100%', maxWidth: '100%', padding: 0 }}>
+        <Grid style={{ minHeight: '100vh', width: '100%', maxWidth: '100%', padding: 0, backgroundColor: '#191d2b' }}>
           {children}
         </Grid>
       </body>

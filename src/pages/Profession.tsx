@@ -1,10 +1,10 @@
+'use client'
 import React from 'react';
 import { Typography, Grid, Card, CardContent } from '@mui/material';
-import { css } from '@emotion/react';
-import { offeringsStyles } from './../styles/offeringsStyles';
+import { offeringsStyles } from '../styles/professionsStyles';
 import styled from '@emotion/styled';
 import AnimatedBox from '../components/AnimatedBox';
-import useIsMobile from './../utils/mediaQueries';
+import useIsMobile from '../utils/mediaQueries';
 
 const Section = styled.section`
   ${offeringsStyles.section}
@@ -26,8 +26,8 @@ const Desciption = styled(Typography)`
   ${offeringsStyles.cardDescription}
 `;
 
-const Circle = styled.div<{ img: string; index: number; isMobile: boolean }>`
-  ${({ img, index, isMobile }) => offeringsStyles.circle(img, index, isMobile)}
+const Circle = styled.div<{ img: string; index: number; ismobile: boolean }>`
+  ${({ img, index, ismobile: isMobile }) => offeringsStyles.circle(img, index, isMobile)}
 `;
 
 const StyledCard = styled(Card)`
@@ -42,7 +42,7 @@ const CardContentWrapper = styled(CardContent) <{ index: number }>`
   ${({ index }) => offeringsStyles.cardContent(index)}
 `;
 
-const Offerings: React.FC = () => {
+const Profession: React.FC = () => {
   const isMobile = useIsMobile();
   return (
     <Section id="about">
@@ -100,7 +100,7 @@ const Offerings: React.FC = () => {
           <Grid item xs={12} sm={6} key={index}>
             <StyledCard>
               <AnimatedBox variant="fadeIn">
-                <Circle img={offer.img} index={index + 1} isMobile={isMobile}/>
+                <Circle img={offer.img} index={index + 1} ismobile={isMobile}/>
               </AnimatedBox>
               <AnimatedBox variant="fadeInDown">
                 <CardContentWrapper index={index + 1}>
@@ -120,4 +120,4 @@ const Offerings: React.FC = () => {
   );
 };
 
-export default Offerings;
+export default Profession;

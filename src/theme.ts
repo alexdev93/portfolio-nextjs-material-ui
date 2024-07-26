@@ -1,5 +1,4 @@
 'use client';
-
 import { createTheme, Theme } from '@mui/material/styles';
 
 const primaryMain = "#191d2b";
@@ -14,8 +13,6 @@ const grey4 = "#454e56";
 const grey5 = "#2a2e35";
 const grey6 = "#12181b";
 const boxShadow1 = "0 3px 15px rgba(0, 0, 0, .3)";
-const animateDuration = "300ms";
-const animateDelay = "0.2ms";
 const borderRadiusSm2 = "14px";
 
 const createCustomTheme = (): Theme => {

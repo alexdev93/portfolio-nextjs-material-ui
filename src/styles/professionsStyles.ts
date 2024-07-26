@@ -1,5 +1,6 @@
+'use client'
 import { css } from '@emotion/react';
-import createCustomTheme from './../theme';
+import createCustomTheme from '../theme';
 
 // Get theme values
 const theme = createCustomTheme();
@@ -44,10 +45,10 @@ export const offeringsStyles = {
       font-size: 3.75rem;
     }
   `,
-  grid: (isMobile: boolean) => css`
+  grid: (ismobile: boolean) => css`
     text-align: left;
     margin: 0 auto;
-    ${isMobile ? ` width: 100%; ` : `width: 85%;`};
+    ${ismobile ? ` width: 100%; ` : `width: 85%;`};
   `,
   card: css`
     background-color: transparent;
@@ -83,7 +84,7 @@ export const offeringsStyles = {
       color: #fff;
     }
   `,
-  circle: (img: string, index: number, isMobile: boolean) => css`
+  circle: (img: string, index: number, ismobile: boolean) => css`
     position: absolute;
     width: 100%;
     height: 100%;
@@ -104,7 +105,7 @@ export const offeringsStyles = {
           ? 'circle(calc(2.25rem + 7.5vw) at 100% 0%)'
           : 'circle(calc(1rem + 7.5vw) at 0% 0%)'
     };
-    ${isMobile ? 
+    ${ismobile ? 
       ` clip-path: none;
       background: transparent; ` : ``};
   `,

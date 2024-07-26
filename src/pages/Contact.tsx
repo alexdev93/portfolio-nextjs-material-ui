@@ -1,9 +1,8 @@
-// pages/contact.tsx
-
+'use client'
 import React from 'react';
 import { Container, Grid, Typography, TextField, Button, Box, Link as MuiLink } from '@mui/material';
 import { Email, Phone, LocationOn } from '@mui/icons-material';
-import contactPageStyles from '@/styles/contactStyles';
+import contactStyles from '@/styles/contactStyles';
 import AnimatedBox from '../components/AnimatedBox';
 
 
@@ -19,80 +18,80 @@ const ContactPage: React.FC = () => {
       placeItems: 'center',
       marginBottom: 10,
     }} id="contact">
-      <Container sx={contactPageStyles.container}>
+      <Container sx={contactStyles.container}>
         <AnimatedBox variant="fadeInUp">
-          <Typography variant="h4" sx={contactPageStyles.title}>
+          <Typography variant="h4" sx={contactStyles.title}>
             Contact Me
           </Typography>
         </AnimatedBox>
         <Grid container spacing={4}>
           <Grid item xs={12} md={6}>
-            <Box sx={contactPageStyles.section}>
+            <Box sx={contactStyles.section}>
               <Typography variant="h6" sx={{ marginBottom: '1em', color: '#5dbb65' }}>Contact Information</Typography>
-              <Box sx={contactPageStyles.contactItem}>
-                <Email sx={contactPageStyles.contactIcon} />
-                <Typography sx={contactPageStyles.contactInfo}>
+              <Box sx={contactStyles.contactItem}>
+                <Email sx={contactStyles.contactIcon} />
+                <Typography sx={contactStyles.contactInfo}>
                   <MuiLink href="mailto:email@domain.com" color="inherit">email@domain.com</MuiLink>
                 </Typography>
               </Box>
-              <Box sx={contactPageStyles.contactItem}>
-                <Phone sx={contactPageStyles.contactIcon} />
-                <Typography sx={contactPageStyles.contactInfo}>
+              <Box sx={contactStyles.contactItem}>
+                <Phone sx={contactStyles.contactIcon} />
+                <Typography sx={contactStyles.contactInfo}>
                   <MuiLink href="tel:+123456789" color="inherit">+123 456 789</MuiLink>
                 </Typography>
               </Box>
-              <Box sx={contactPageStyles.contactItem}>
-                <LocationOn sx={contactPageStyles.contactIcon} />
-                <Typography sx={contactPageStyles.contactInfo}>
+              <Box sx={contactStyles.contactItem}>
+                <LocationOn sx={contactStyles.contactIcon} />
+                <Typography sx={contactStyles.contactInfo}>
                   123 Main Street, City, Country
                 </Typography>
               </Box>
             </Box>
           </Grid>
           <Grid item xs={12} md={6}>
-            <Box sx={contactPageStyles.section}>
+            <Box sx={contactStyles.section}>
               <Typography variant="h6" sx={{ marginBottom: '1em', color: '#5dbb65' }}>Send Me a Message</Typography>
-              <Box component="form" sx={contactPageStyles.form}>
+              <Box component="form" sx={contactStyles.form}>
                 <TextField
                   label="Name"
                   variant="outlined"
-                  sx={contactPageStyles.formField}
+                  sx={contactStyles.formField}
                   required
                   InputLabelProps={{
-                    sx: contactPageStyles.labelField
+                    sx: contactStyles.labelField
                   }}
                 />
                 <TextField
                   label="Email"
                   variant="outlined"
-                  sx={contactPageStyles.formField}
+                  sx={contactStyles.formField}
                   type="email"
                   required
                   InputLabelProps={{
-                    sx: contactPageStyles.labelField
+                    sx: contactStyles.labelField
                   }}
                 />
                 <TextField
                   label="Subject"
                   variant="outlined"
-                  sx={contactPageStyles.formField}
+                  sx={contactStyles.formField}
                   required
                   InputLabelProps={{
-                    sx: contactPageStyles.labelField
+                    sx: contactStyles.labelField
                   }}
                 />
                 <TextField
                   label="Message"
                   variant="outlined"
-                  sx={contactPageStyles.formField}
+                  sx={contactStyles.formField}
                   multiline
                   rows={4}
                   required
                   InputLabelProps={{
-                    sx: contactPageStyles.labelField
+                    sx: contactStyles.labelField
                   }}
                 />
-                <Button type="submit" sx={contactPageStyles.submitButton}>
+                <Button type="submit" sx={contactStyles.submitButton}>
                   Send Message
                 </Button>
               </Box>
