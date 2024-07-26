@@ -9,6 +9,7 @@ const skillsStyles = (theme: Theme): Record<string, SxProps<Theme>> => ({
     fontSize: '1.8rem',
     textAlign: 'center',
     padding: '3.5rem 0',
+    color: '#fff',
     position: 'relative',
     '&::before': {
       content: '""',

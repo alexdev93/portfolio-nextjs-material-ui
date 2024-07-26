@@ -1,9 +1,14 @@
 import { SxProps, Theme } from '@mui/material/styles';
+import createCustomTheme from './../theme';
 
-const aboutMeStyles = (theme: Theme): Record<string, SxProps<Theme>> => ({
+// Get theme values
+const theme = createCustomTheme();
+
+const aboutMeStyles = (): Record<string, SxProps<Theme>> => ({
   aboutSection: {
     padding: '2em',
-    color: theme.palette.primary.main,
+    color: theme.palette.secondary.main,
+    width: '90%',
   },
   mainTitle: {
     marginBottom: '3.5rem',
@@ -38,12 +43,13 @@ const aboutMeStyles = (theme: Theme): Record<string, SxProps<Theme>> => ({
   paragraph: {
     lineHeight: 1.5,
     marginBottom: '1rem',
-    color: theme.palette.text.secondary,
+    color: theme.palette.common.white,
   },
   btnContainer: {
     marginTop: '2rem',
   },
   card: {
+    backgroundColor: theme.palette.grey[500],
     border: `1px solid ${theme.palette.divider}`,
     borderRadius: '5px',
     transition: 'all 0.4s ease-in-out',
@@ -70,7 +76,7 @@ const aboutMeStyles = (theme: Theme): Record<string, SxProps<Theme>> => ({
   },
   smallText: {
     fontSize: '1.2rem',
-    color: theme.palette.text.secondary,
+    color: '#9BF2EA',
     textTransform: 'uppercase',
   },
   highlight: {

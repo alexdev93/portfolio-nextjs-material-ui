@@ -26,10 +26,12 @@ const SkillsSection = () => {
       width: '100%',
       maxWidth: '100%',
       padding: 0,
+      color: '#fff',
+      backgroundColor: '#191d2b',
       display: 'grid',
       placeItems: 'center'
     }}>
-      <Container>
+      <Container style={{width: '80%'}}>
         <Box sx={classes.aboutStats}>
           <Typography variant="h4" sx={classes.statTitle}>My Skills</Typography>
           <Grid container spacing={4} sx={classes.progressBars}>

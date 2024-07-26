@@ -13,6 +13,7 @@ const ContactPage: React.FC = () => {
       width: '100%',
       maxWidth: '100%',
       padding: 0,
+      backgroundColor: '#191d2b',
       display: 'grid',
       placeItems: 'center',
       marginBottom: 10,

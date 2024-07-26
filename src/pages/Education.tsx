@@ -12,7 +12,10 @@ const EducationContainer = styled(Container)(() => ({
   minHeight: '70vh',
   display: 'grid',
   placeItems: 'center',
+  paddingTop: 10,
+  paddingBottom: 10,
 }));
+
 const EducationItem = styled(Paper)`
   padding: 1.5rem;
   display: flex;
@@ -25,6 +28,22 @@ const EducationItem = styled(Paper)`
   &:hover {
     transform: scale(1.05);
   }
+`;
+
+const Heading = styled(Typography)`
+    color: #beebd0;
+    font-size: 2.25rem;
+    font-weight: 600;
+    max-width: 48rem;
+    margin: 0 auto 2rem;
+    line-height: 1.375;
+    text-align: left;
+    @media (min-width: 768px) {
+      font-size: 3rem;
+    }
+    @media (min-width: 1280px) {
+      font-size: 3.75rem;
+    }
 `;
 
 const EducationDetails = styled(Box)`
@@ -60,15 +79,17 @@ const Education: React.FC = () => {
   ];
 
   return (
+    <Container style={{width: "100%", maxWidth: "100%", backgroundColor: "#191d2b"}}>
+
     <EducationContainer>
-      <Typography variant="h4" align="center" gutterBottom>
+      <Heading>
         Education
-      </Typography>
+      </Heading>
       <Grid container spacing={4} justifyContent="center">
         {educationData.map((edu, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
             <EducationItem>
-              <SchoolIcon color="secondary" fontSize="large" />
+              <SchoolIcon sx={{color: '#9BF2EA'}} fontSize="large" />
               <EducationDetails>
                 <SchoolName variant="h6">{edu.school}</SchoolName>
                 <Degree variant="subtitle1">{edu.degree}</Degree>
@@ -79,6 +100,7 @@ const Education: React.FC = () => {
         ))}
       </Grid>
     </EducationContainer>
+    </Container>
   );
 };
 

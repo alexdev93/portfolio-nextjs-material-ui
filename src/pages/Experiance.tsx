@@ -38,13 +38,6 @@ const experiences = [
     description: 'I pursued a comprehensive computer science degree from Unity University. The program provided me with a solid foundation in computer science principles, algorithms, data structures, and software development methodologies.',
     icon: <School />,
   },
-  {
-    duration: '2023 - present',
-    title: 'Web Assembly',
-    company: '',
-    description: 'Currently, I am focusing on learning and utilizing Web Assembly technology to enhance web application performance and explore new possibilities for web development. I aim to leverage the power of Web Assembly to build efficient and high-performance web applications.',
-    icon: <Work />,
-  },
 ];
 
 const Experiance = () => {
@@ -54,9 +47,14 @@ const Experiance = () => {
       width: '100%',
       maxWidth: '100%',
       display: 'grid',
-      placeItems: 'center'
+      placeItems: 'center', 
+      backgroundColor: "#191d2b",
+      color: '#fff'
     }}>
-      <Container>
+      <Container style={{
+      width: '80%',
+      color: '#fff'
+    }}>
         <Typography variant="h4" align="center" gutterBottom>
           My Timeline
         </Typography>
@@ -91,12 +89,13 @@ const Experiance = () => {
                   variant="body2"
                   sx={{
                     padding: '0.2rem 0.6rem',
-                    backgroundColor: 'grey.300',
+                    backgroundColor: '#191d2b',
                     borderRadius: '15px',
                     display: 'inline-block',
                     textTransform: 'uppercase',
                     fontWeight: '500',
                     mb: '0.5rem',
+                    color: '#fff'
                   }}
                 >
                   {experience.duration}
@@ -104,13 +103,13 @@ const Experiance = () => {
                 <Typography variant="h6" sx={{ fontWeight: 600 }}>
                   {experience.title}
                   {experience.company && (
-                    <span style={{ color: 'grey.600', fontWeight: 500 }}>
+                    <span style={{ color: '#fff', fontWeight: 500 }}>
                       {' '}
                       - {experience.company}
                     </span>
                   )}
                 </Typography>
-                <Typography variant="body2" color="textSecondary">
+                <Typography variant="body2" color="#fff">
                   {experience.description}
                 </Typography>
               </Box>

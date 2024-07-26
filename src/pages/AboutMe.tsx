@@ -5,8 +5,7 @@ import aboutMeStyles from '../styles/aboutMeStyles';
 import { useTheme } from '@mui/material/styles';
 
 const AboutMe = () => {
-  const theme = useTheme();
-  const classes = aboutMeStyles(theme);
+  const classes = aboutMeStyles();
 
   return (
     <Container style={{
@@ -14,6 +13,7 @@ const AboutMe = () => {
       width: '100%',
       maxWidth: '100%',
       padding: 20,
+      backgroundColor: '#191d2b',
       display: 'grid',
       placeItems: 'center'
     }}>
@@ -40,8 +40,8 @@ const AboutMe = () => {
               </Typography>
               <Box sx={classes.btnContainer}>
                 <Button
+                style={{backgroundColor: '#9BF2EA', color: '#260101'}}
                   variant="contained"
-                  color="secondary"
                   startIcon={<DownloadIcon />}
                   href="https://fair-gray-goat-gown.cyclic.app/pdf"
                 >

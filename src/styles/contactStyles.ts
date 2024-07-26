@@ -1,3 +1,4 @@
+// contactPageStyles.ts
 import { SxProps, Theme } from '@mui/material/styles';
 import createCustomTheme from './../theme';
 
@@ -8,7 +9,7 @@ const contactPageStyles: Record<string, SxProps<Theme>> = {
   container: {
     padding: '2em',
     backgroundColor: theme.palette.primary.main,
-    color: '#FFF',
+    color: theme.palette.common.white,
   },
   title: {
     marginBottom: '2em',
@@ -39,15 +40,30 @@ const contactPageStyles: Record<string, SxProps<Theme>> = {
     color: theme.palette.common.white,
   },
   formField: {
+    border: '1px solid #7297A6',
     width: '100%',
-    color: '#fff',
+    color: theme.palette.common.white,
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
+        borderColor: '#7297A6',
+      },
+      '&:hover fieldset': {
+        borderColor: theme.palette.secondary.main,
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: theme.palette.primary.main,
+      },
+      '& .MuiInputBase-input': {
+        color: theme.palette.common.white,
+      },
+    },
   },
   submitButton: {
     alignSelf: 'flex-start',
     backgroundColor: theme.palette.secondary.main,
-    color: '#fff',
+    color: theme.palette.common.white,
     '&:hover': {
-      backgroundColor: '#0056b3',
+      backgroundColor: theme.palette.secondary.dark, // Use a darker shade from the secondary palette if available
     },
   },
 };

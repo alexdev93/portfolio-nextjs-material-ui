@@ -1,21 +1,18 @@
 'use client'
 
 import React, { useEffect, useState } from 'react';
-import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import GlobalStyles from '../styles/GlobalStyles';
 import LoaderComponent from '../components/LoaderComponent';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import HomePage from './../pages/HomePage';
-import Details from '../pages/Details';
 import Education from '../pages/Education';
 import AboutMe from '../pages/AboutMe';
 import SkillsSection from '../pages/SkillsSection';
 import ContactPage from '../pages/ContactPage';
 import Experiance from '../pages/Experiance';
 import Offerings from '../pages/Offerings';
-import { ThemeProvider } from '@mui/material/styles';
 import { useTheme } from '@mui/material/styles';
 
 export default function Home() {
@@ -40,11 +37,10 @@ export default function Home() {
           <Navigation />
           <HomePage />
           <Offerings />
-          {/* <Details /> */}
-          <Education />
-          <Experiance />
           <AboutMe />
+          <Education />
           <SkillsSection />
+          <Experiance />
           <ContactPage />
           <Footer />
         </Grid>
