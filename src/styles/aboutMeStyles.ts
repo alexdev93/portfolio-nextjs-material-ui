@@ -29,14 +29,14 @@ const aboutMeStyles = (isMobile: boolean): Record<string, SxProps<Theme>> => ({
     },
   },
   aboutContainer: {
-    paddingBottom: '5rem',
+    paddingBottom: isMobile ? '5rem' : '',
     width: '100%',
     diplay: 'grid',
     placeItems: 'center',
     marginLeft: isMobile ? 0 : '',
   },
   leftAbout: {
-    paddingRight: '2rem',
+    padding: '2rem',
     marginBottom: isMobile ? '2rem' : '',
     '& h4': {
       fontSize: '2rem',
@@ -67,7 +67,6 @@ const aboutMeStyles = (isMobile: boolean): Record<string, SxProps<Theme>> => ({
     },
   },
   cardContent: {
-    padding: '1.5rem',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
