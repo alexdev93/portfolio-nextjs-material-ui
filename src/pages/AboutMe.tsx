@@ -2,10 +2,12 @@ import React from 'react';
 import { Box, Typography, Button, Grid, Card, CardContent, Container } from '@mui/material';
 import DownloadIcon from '@mui/icons-material/Download';
 import aboutMeStyles from '../styles/aboutMeStyles';
-import { useTheme } from '@mui/material/styles';
+import  useIsMobile  from './../utils/mediaQueries';
+
 
 const AboutMe = () => {
-  const classes = aboutMeStyles();
+  const isMobile = useIsMobile();
+  const classes = aboutMeStyles(isMobile);
 
   return (
     <Container style={{
@@ -17,7 +19,7 @@ const AboutMe = () => {
       display: 'grid',
       placeItems: 'center'
     }}>
-      <Box sx={classes.aboutSection}>
+      <Box sx={classes.aboutSection} style={{width: isMobile? '100%': '90%'}}>
         <Box sx={classes.mainTitle}>
           <Typography variant="h2">
             About me
@@ -43,7 +45,7 @@ const AboutMe = () => {
                 style={{backgroundColor: '#9BF2EA', color: '#260101'}}
                   variant="contained"
                   startIcon={<DownloadIcon />}
-                  href="https://fair-gray-goat-gown.cyclic.app/pdf"
+                  href="./ALEMAYEHU MEKONEN-2.pdf"
                 >
                   Download CV
                 </Button>

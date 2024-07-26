@@ -4,6 +4,7 @@ import { css } from '@emotion/react';
 import { offeringsStyles } from './../styles/offeringsStyles';
 import styled from '@emotion/styled';
 import AnimatedBox from '../components/AnimatedBox';
+import useIsMobile from './../utils/mediaQueries';
 
 const Section = styled.section`
   ${offeringsStyles.section}
@@ -25,16 +26,16 @@ const Desciption = styled(Typography)`
   ${offeringsStyles.cardDescription}
 `;
 
-const Circle = styled.div<{ img: string; index: number }>`
-  ${({ img, index }) => offeringsStyles.circle(img, index)}
+const Circle = styled.div<{ img: string; index: number; isMobile: boolean }>`
+  ${({ img, index, isMobile }) => offeringsStyles.circle(img, index, isMobile)}
 `;
 
 const StyledCard = styled(Card)`
   ${offeringsStyles.card}
 `;
 
-const StyledGrid = styled(Grid)`
-  ${offeringsStyles.grid}
+const StyledGrid = styled(Grid)<{ isMobile: boolean }>`
+${({ isMobile }) => offeringsStyles.grid( isMobile)}
 `;
 
 const CardContentWrapper = styled(CardContent) <{ index: number }>`
@@ -42,6 +43,7 @@ const CardContentWrapper = styled(CardContent) <{ index: number }>`
 `;
 
 const Offerings: React.FC = () => {
+  const isMobile = useIsMobile();
   return (
     <Section id="about">
       <Subtitle variant="subtitle1">
@@ -64,7 +66,7 @@ const Offerings: React.FC = () => {
       <Heading variant="h1">
         Services Built Specifically for your Business
       </Heading>
-      <StyledGrid container spacing={3}>
+      <StyledGrid container spacing={3} isMobile={isMobile}>
         {[
           {
             varient: "fadeInLeft",
@@ -98,7 +100,7 @@ const Offerings: React.FC = () => {
           <Grid item xs={12} sm={6} key={index}>
             <StyledCard>
               <AnimatedBox variant="fadeIn">
-                <Circle img={offer.img} index={index + 1} />
+                <Circle img={offer.img} index={index + 1} isMobile={isMobile}/>
               </AnimatedBox>
               <AnimatedBox variant="fadeInDown">
                 <CardContentWrapper index={index + 1}>

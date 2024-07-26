@@ -7,13 +7,11 @@ import createCustomTheme from './../theme';
 const theme = createCustomTheme();
 
 const EducationContainer = styled(Container)(() => ({
-  padding: '2rem',
   backgroundColor: theme.palette.primary.main,
-  minHeight: '70vh',
+  minHeight: '50vh',
   display: 'grid',
   placeItems: 'center',
-  paddingTop: 10,
-  paddingBottom: 10,
+  marginBottom: '8rem',
 }));
 
 const EducationItem = styled(Paper)`
@@ -35,7 +33,6 @@ const Heading = styled(Typography)`
     font-size: 2.25rem;
     font-weight: 600;
     max-width: 48rem;
-    margin: 0 auto 2rem;
     line-height: 1.375;
     text-align: left;
     @media (min-width: 768px) {

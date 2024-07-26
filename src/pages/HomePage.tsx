@@ -12,8 +12,10 @@ import {
 } from '../styles/HomeStyles';
 import Image from 'next/image';
 import AnimatedBox from '../components/AnimatedBox';
+import useIsMobile from './../utils/mediaQueries';
 
 const HomeHeader = () => {
+  const isMobile = useIsMobile();
   return (
     <Header className="cnt header active" id="home">
       <HeaderContent className="header-content">

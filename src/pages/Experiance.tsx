@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Typography, Grid, Container } from '@mui/material';
 import { Work, School } from '@mui/icons-material';
+import { styled } from '@mui/system';
 
 const experiences = [
   {
@@ -40,6 +41,23 @@ const experiences = [
   },
 ];
 
+const Header = styled(Box)(() => ({
+  width: '100%',
+  padding: '2rem',
+  position: 'relative',
+  color: '#A3BFAA',
+  marginTop: '5rem',
+  marginBottom: '5rem',
+  '&::after': {
+    content: '""',
+    display: 'block',
+    width: '100%',
+    height: '2px',
+    backgroundColor: '#454e56',
+    marginTop: '1rem',
+  },
+}));
+
 const Experiance = () => {
   return (
     <Container style={{
@@ -47,17 +65,17 @@ const Experiance = () => {
       width: '100%',
       maxWidth: '100%',
       display: 'grid',
-      placeItems: 'center', 
+      placeItems: 'center',
       backgroundColor: "#191d2b",
       color: '#fff'
     }}>
       <Container style={{
-      width: '80%',
-      color: '#fff'
-    }}>
-        <Typography variant="h4" align="center" gutterBottom>
-          My Timeline
-        </Typography>
+        width: '80%',
+        color: '#fff'
+      }}>
+        <Header>
+          <Typography variant="h4">Experiance</Typography>
+        </Header>
         <Grid container spacing={4}>
           {experiences.map((experience, index) => (
             <Grid item xs={12} md={6} key={index}>
@@ -74,7 +92,7 @@ const Experiance = () => {
                     position: 'absolute',
                     left: '-25px',
                     top: 0,
-                    backgroundColor: 'secondary.main',
+                    backgroundColor: '#27AE60',
                     width: '50px',
                     height: '50px',
                     borderRadius: '50%',
@@ -100,7 +118,7 @@ const Experiance = () => {
                 >
                   {experience.duration}
                 </Typography>
-                <Typography variant="h6" sx={{ fontWeight: 600 }}>
+                <Typography variant="h6" sx={{ fontWeight: 600, color: '#beebd0' }}>
                   {experience.title}
                   {experience.company && (
                     <span style={{ color: '#fff', fontWeight: 500 }}>
@@ -109,7 +127,7 @@ const Experiance = () => {
                     </span>
                   )}
                 </Typography>
-                <Typography variant="body2" color="#fff">
+                <Typography variant="body2" color="#dbe1e8">
                   {experience.description}
                 </Typography>
               </Box>

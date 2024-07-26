@@ -1,5 +1,4 @@
 import { css } from '@emotion/react';
-import { isMobile } from './../utils/mediaQueries';
 import createCustomTheme from './../theme';
 
 // Get theme values
@@ -45,14 +44,10 @@ export const offeringsStyles = {
       font-size: 3.75rem;
     }
   `,
-  grid: css`
+  grid: (isMobile: boolean) => css`
     text-align: left;
-    width: 85%;
     margin: 0 auto;
-    
-     ${isMobile`
-      width: 100%;
-   `}
+    ${isMobile ? ` width: 100%; ` : `width: 85%;`};
   `,
   card: css`
     background-color: transparent;
@@ -88,12 +83,11 @@ export const offeringsStyles = {
       color: #fff;
     }
   `,
-  circle: (img: string, index: number) => css`
+  circle: (img: string, index: number, isMobile: boolean) => css`
     position: absolute;
     width: 100%;
     height: 100%;
     z-index: 0;
-    background: ${theme.palette.secondary.main} no-repeat 50% 50% / cover;
     background: ${index === 1
       ? '#A3BFAA no-repeat 50% 50% / cover'
       : index === 2
@@ -110,9 +104,8 @@ export const offeringsStyles = {
           ? 'circle(calc(2.25rem + 7.5vw) at 100% 0%)'
           : 'circle(calc(1rem + 7.5vw) at 0% 0%)'
     };
-     ${isMobile`
-      clip-path: none;
-      background: transparent;
-   `}
+    ${isMobile ? 
+      ` clip-path: none;
+      background: transparent; ` : ``};
   `,
 };

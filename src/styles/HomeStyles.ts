@@ -1,6 +1,5 @@
 // HeaderStyles.js
 import styled from '@emotion/styled';
-import { isMobile } from './../utils/mediaQueries';
 import createCustomTheme from './../theme';
 
 // Get theme values
@@ -23,12 +22,10 @@ export const HeaderContent = styled.div`
   @media screen and (max-width: 800px) {
     grid-template-columns: repeat(1, 1fr);
     padding-bottom: 6rem;
-  }
-
-  ${isMobile`
     margin: 0 auto;
     width: 90%;
-   `}
+  }
+
 `;
 
 export const LeftHeader = styled.div`
@@ -37,9 +34,9 @@ export const LeftHeader = styled.div`
   align-items: center;
   justify-content: center;
 
-  ${isMobile`
+  @media screen and (max-width: 800px) {
     margin-left: 0;
-   `}
+  }
 `;
 
 export const HShape = styled.div`
@@ -53,9 +50,9 @@ export const HShape = styled.div`
   z-index: 0;
   clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
 
-  ${isMobile`
+  @media screen and (max-width: 800px) {
    display: none;
-  `}
+   }
 `;
 
 export const ImageContainer = styled.div`
@@ -75,11 +72,11 @@ export const ImageContainer = styled.div`
     filter: grayscale(100%);
   }
 
-  ${isMobile`
+  @media screen and (max-width: 800px) {
     width: 100%;
     margin-left: 0; /* Adjust the margin for mobile devices */
     height: 60vh; /* Adjust the height for mobile devices */
-  `}
+  }
 `;
 
 export const RightHeader = styled.div`

@@ -1,6 +1,10 @@
 // components/LoaderStyles.tsx
 
 import styled from '@emotion/styled';
+import createCustomTheme from './../theme';
+
+// Get theme values
+const theme = createCustomTheme();
 
 export const LoaderContainer = styled.div`
   height: 100vh;
@@ -8,8 +12,9 @@ export const LoaderContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: #27AE60; /* Assuming var(--color-secondary) is #27AE60 */
+  color: ${theme.palette.secondary.main};
   overflow-x: hidden;
+  background-color: ${theme.palette.primary.main};
 `;
 
 export const Pencil = styled.div`
@@ -87,7 +92,7 @@ export const PencilEraser = styled.div`
   width: 11%;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
-  background: #232123;
+  background: ${theme.palette.secondary.main};
 `;
 
 export const Line = styled.div`
@@ -98,7 +103,8 @@ export const Line = styled.div`
   width: 1000px;
   z-index: -1;
   border-radius: 50px;
-  background: #09d56e;
+  background-color: ${theme.palette.secondary.main};
+  color: ${theme.palette.secondary.main};
   transform: scaleX(0);
   transform-origin: center;
   animation: lineAnimation 10s infinite;
@@ -123,10 +129,12 @@ export const LoadText = styled.h2`
   justify-self: self-end;
   position: relative;
   top: 150px;
+  color: ${theme.palette.secondary.main};
 `;
 
 // Media query example (adjust as needed)
 export const LineMediaQuery = styled(Line)`
+  color: ${theme.palette.secondary.main};
   @media screen and (max-width: 800px) {
     width: 400px;
   }

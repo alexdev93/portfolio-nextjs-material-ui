@@ -4,11 +4,11 @@ import createCustomTheme from './../theme';
 // Get theme values
 const theme = createCustomTheme();
 
-const aboutMeStyles = (): Record<string, SxProps<Theme>> => ({
+const aboutMeStyles = (isMobile: boolean): Record<string, SxProps<Theme>> => ({
   aboutSection: {
-    padding: '2em',
+    padding: isMobile ? 0 : '2em',
     color: theme.palette.secondary.main,
-    width: '90%',
+    width: isMobile ? '100%' : '90%',
   },
   mainTitle: {
     marginBottom: '3.5rem',
@@ -30,10 +30,14 @@ const aboutMeStyles = (): Record<string, SxProps<Theme>> => ({
   },
   aboutContainer: {
     paddingBottom: '5rem',
+    width: '100%',
+    diplay: 'grid',
+    placeItems: 'center',
+    marginLeft: isMobile ? 0 : '',
   },
   leftAbout: {
     paddingRight: '2rem',
-
+    marginBottom: isMobile ? '2rem' : '',
     '& h4': {
       fontSize: '2rem',
       textTransform: 'uppercase',

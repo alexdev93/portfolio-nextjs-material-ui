@@ -1,8 +1,8 @@
-// utils/mediaQueries.ts
-import { css } from '@emotion/react';
+import { useTheme, useMediaQuery } from '@mui/material';
 
-export const isMobile = (styles: TemplateStringsArray | string) => css`
-  @media (max-width: 768px) {
-    ${styles}
-  }
-`;
+const useIsMobile = () => {
+  const theme = useTheme();
+  return useMediaQuery(theme.breakpoints.down('sm'));
+};
+
+export default useIsMobile;

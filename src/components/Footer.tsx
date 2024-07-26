@@ -9,8 +9,9 @@ const footerStyles: Record<string, SxProps<Theme>> = {
   footer: {
     backgroundColor: '#141618',
     width: '100%',
-    padding: '20px 0',
+    padding: '2rem',
     color: '#e6e8ea',
+    marginBottom: '2reem',
   },
   container: {
     padding: '20px',
@@ -23,7 +24,8 @@ const footerStyles: Record<string, SxProps<Theme>> = {
   },
   subFooter: {
     backgroundColor: '#141618',
-    padding: '10px 0',
+    padding: '50px 0',
+    gap: '10px',
   },
   socialLinks: {
     color: '#e6e8ea',
