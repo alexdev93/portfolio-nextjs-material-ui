@@ -36,7 +36,7 @@ const aboutMeStyles = (isMobile: boolean): Record<string, SxProps<Theme>> => ({
     marginLeft: isMobile ? 0 : '',
   },
   leftAbout: {
-    padding: '2rem',
+    padding: '1rem',
     marginBottom: isMobile ? '2rem' : '',
     '& h4': {
       fontSize: '2rem',
